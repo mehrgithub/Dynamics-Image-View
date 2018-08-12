@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <link href="mtools_imgctrlcss" rel="stylesheet" />
+
+        <script src="mtools_jquery2.1.4.min"></script>
+        <script src="mtools_WEBAPISDK"></script>
+        <script src="mtools_imgctrljs"></script>
+
+	</head>
+<body>
+    <div class="ctrlcontainer" id="maincontainer">
+        <div class="ctrlfilter">
+            <div>Note:</div>
+            <input id="notetext" title="Enter a value to filter images based on a value in the note text" />
+            <div>Type:</div>
+            <input id="noteimagetypes" title="Enter an image type. For multiple, seperated by comma. Example: gif,jpeg,png" />
+            <div>Filename:</div>
+            <input id="imagefilename" title="Enter a value to filter images based on a value in the image file name" />
+            <button id="filterimages" title="Filter results based on a value in the note text and/or attached image type and/or image file name">Filter</button>
+            <button id="resetfilterimages" title="Reset filter. Get all images">Reset</button>
+            <button id="setentityimages" title="Set current image as entity image. If successfull, the form will be refreshed.">Set Image</button>
+        </div>
+        <div class="noimagesfoundinner"><h4>No images are found.</h4></div>
+    </div>
+
+    <div class="flyoutOverlay" style="display:none;width:100%;height:100%;position:fixed;top:0;left:0;background-color: rgba(235, 235, 235, 0.7);z-index:10004;">
+        <div class="flyoutimagecontainer" style="position:absolute;padding:0;margin:auto;width:100px;height:100px;top:0;left:0;bottom:0;right:0;overflow:auto;">
+            <img class="flyoutimage" style="padding:0;margin:0;outline:none;" />
+        </div>
+    </div>
+
+    <div id="dcrmegProcessingDialog" class="dcrmegdialogprocessing">
+        <div class="dcrmegprocessingtitle">
+            <div class="dcrmegprocessingimg"><img src="/_imgs/processing_loader.gif" /></div>
+            <div>Loading...</div>
+        </div>
+    </div>
+
+    <div class="noimagesfound"><h3>No images are available for this record</h3></div>
+
+    <script type="text/javascript" charset="utf-8">
+        $(function () {
+            InitializeCtrl();
+        });
+    </script>
+
+</body>
+
+</html>
