@@ -6,12 +6,15 @@ A dynamics 2016 and 365 image viewer to view attached note's images. It offers s
 **Set Up**
 
 Import managed or un managed solution from the solutions folder
+
 Create a new Dynamics Image Viewer Configuration instance
 
 ![](Config.PNG)
 
 Copy the configuration Guid
+
 Go to the form where you are to add the image viewer and add a web resource mtools_DynamicsImageViewerWebResource
+
 Paste the Guid from the Dynamics Image Viewer Configuration to the Custom Parameter(data) text field on the Web Resource Properties section
 
 ![](Webresource01.PNG)
